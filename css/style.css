@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -187,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-bottom: 27px;
 }
-.content-top .content-top__not-cart {
+.content-top .not-cart {
   font: 400 14px/200% "Inter", sans-serif;
   color: #FFFFFF;
   text-align: center;
@@ -400,4 +401,231 @@ h1, h2, h3, h4, h5, h6 {
   font: 400 18px/178% "Inter", sans-serif;
   color: #323232;
   margin-bottom: 29px;
+}
+
+.pricing {
+  background-color: #f8fbfe;
+}
+.pricing .pricing__container {
+  max-width: 750px;
+  padding: 120px 0 253px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.pricing .pricing__title {
+  font: 700 38px/132% "Inter", sans-serif;
+  color: black;
+  margin-bottom: 20px;
+}
+.pricing .pricing__text {
+  font: 400 18px/178% "Inter", sans-serif;
+  color: #323232;
+  margin-bottom: 29px;
+}
+
+.choosing-plan {
+  position: relative;
+  top: -210px;
+}
+.choosing-plan .choosing-plan__container {
+  max-width: 730px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.choosing-plan .choise {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.choosing-plan .choise__block {
+  max-width: 350px;
+  padding: 28px 45px;
+  background-color: #FFFFFF;
+}
+.choosing-plan .choise__block span {
+  font-size: 50px;
+}
+.choosing-plan .choise__block:first-child {
+  margin-right: 30px;
+}
+.choosing-plan .for-other-type {
+  text-decoration: line-through;
+  color: #8E8E8E;
+}
+.choosing-plan .for-other-type::before {
+  content: "";
+  background: url(../img/Path-2.png);
+  display: inline-block;
+  width: 14px;
+  height: 11px;
+  margin-right: 5px;
+}
+.choosing-plan .choise__type {
+  font: 700 13px/246% "Inter", sans-serif;
+  color: #878B90;
+  margin-bottom: 17px;
+}
+.choosing-plan .choise__price {
+  font: 700 17px/121% "Inter", sans-serif;
+  color: black;
+  margin-bottom: 14px;
+}
+.choosing-plan .choise__text {
+  font: 400 14px/164% "Inter", sans-serif;
+  color: #323232;
+  margin-bottom: 26px;
+}
+.choosing-plan .choise__benefits {
+  font: 400 18px/178% "Inter", sans-serif;
+  color: black;
+  margin-bottom: 30px;
+}
+.choosing-plan .choise__block__button {
+  margin-bottom: 14px;
+}
+.choosing-plan .choise__block__not-cart {
+  font: 400 14px/200% "Inter", sans-serif;
+  color: #666666;
+}
+.choosing-plan .switch {
+  width: 250px;
+  height: 46px;
+  position: relative;
+  border: 1px solid #E8E8EA;
+  border-radius: 23px;
+  margin-bottom: 40px;
+}
+.choosing-plan .switch label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 23px;
+}
+.choosing-plan .switch label i {
+  display: block;
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  border-radius: inherit;
+  border: 1px solid black;
+}
+.choosing-plan .switch label i:after {
+  content: "yearly";
+  position: absolute;
+  left: 150%;
+  top: 25%;
+  width: 70%;
+  height: 50%;
+  border-radius: inherit;
+}
+.choosing-plan .switch label i:before {
+  content: "";
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  right: 115%;
+  margin-top: -12px;
+  text-transform: uppercase;
+}
+.choosing-plan .switch input:checked ~ label i {
+  /* Toggle */
+  left: auto;
+  right: -1%;
+}
+.choosing-plan .switch input:checked ~ label i:before {
+  /* On/off */
+  content: "monthly";
+  z-index: 3;
+  right: 115%;
+  color: #82a06a;
+}
+.choosing-plan .switch input {
+  /* Вначале делаем его равным размеру контейнера, в котором он находится */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Затем, перемещаем его вверх, относительно других элементов */
+  z-index: 100;
+  /* Делаем его невидимым */
+  opacity: 0;
+  /* А это для эргономичности */
+  cursor: pointer;
+}
+
+.feedback .feedback__container {
+  max-width: 1145px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  top: -100px;
+}
+.feedback .feedback__block {
+  max-width: 375px;
+  border: 1px solid #E8E8EA;
+  padding: 0 55px 48px 55px;
+}
+.feedback .feedback__quotes {
+  font: 400 98px/121% "Inter", sans-serif;
+  color: #DBE4F1;
+}
+.feedback .feedback__text {
+  font: 400 18px/178% "Inter", sans-serif;
+  color: black;
+  margin-bottom: 40px;
+}
+.feedback .feedback__author-name:first-of-type {
+  font-weight: bold;
+}
+.feedback p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font: 400 14px/200% "Inter", sans-serif;
+  color: black;
+  text-align: left;
 }
