@@ -121,7 +121,7 @@ $f-family: 'Inter', sans-serif;
     text-align: center;
     margin-bottom: 27px;
   }
-  .content-top__not-cart{
+  .not-cart{
     font: 400 14px/ 200% $f-family;
     color: $color_white;
     text-align: center;
@@ -237,5 +237,202 @@ $f-family: 'Inter', sans-serif;
       color: $color_text;
       margin-bottom: 29px;
     }
+  }
+}
+
+.pricing{
+  background-color: $background-content-color;
+  .pricing__container{
+    max-width: 750px;
+    padding: 120px 0 253px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  .pricing__title{
+    font: 700 38px/ 132% $f-family;
+    color: $color-black;
+    margin-bottom: 20px;    
+  }
+  .pricing__text{
+    font: 400 18px/ 178% $f-family;
+      color: $color_text;
+      margin-bottom: 29px;
+  }
+}
+
+.choosing-plan{
+  position: relative;
+  top: -210px;
+  .choosing-plan__container{
+    max-width: 730px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .choise{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .choise__block{
+    max-width: 350px;
+    padding: 28px 45px;    
+    background-color: $color_white;
+    span{
+      font-size: 50px;
+    }
+  }
+  .choise__block:first-child{
+    margin-right: 30px;
+  }
+  .for-other-type{
+    text-decoration: line-through;
+    color: #8E8E8E;
+  }
+  .for-other-type::before{
+    content: "";
+    background: url(../img/Path-2.png);
+    display: inline-block;
+    width: 14px;
+    height: 11px;
+    margin-right: 5px;
+  }
+  .choise__type{
+    font: 700 13px/ 246% $f-family;
+      color: #878B90;
+      margin-bottom: 17px;
+  }
+  .choise__price{
+    font: 700 17px/ 121% $f-family;
+    color: $color-black;
+    margin-bottom: 14px;  
+  }
+  .choise__text{
+    font: 400 14px/ 164% $f-family;
+      color: $color_text;
+      margin-bottom: 26px;
+  }
+  .choise__benefits{
+    font: 400 18px/ 178% $f-family;
+      color: $color_black;
+      margin-bottom: 30px;
+  }
+  .choise__block__button{
+    margin-bottom: 14px;
+  }
+  .choise__block__not-cart{
+    font: 400 14px/ 200% $f-family;
+      color: #666666;
+  }
+  
+
+
+  .switch {
+    width: 250px;
+    height: 46px;
+    position: relative;
+    border: 1px solid #E8E8EA;
+    border-radius: 23px;
+    margin-bottom: 40px;
+  }
+  .switch label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 23px;
+  }
+.switch label i {
+  display: block;
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  border-radius: inherit;
+  border: 1px solid black;
+  }
+.switch label i:after {
+  content: "yearly";
+  position: absolute;
+  left: 150%;
+  top: 25%;
+  width: 70%;
+  height: 50%;
+  border-radius: inherit;
+}
+.switch label i:before {
+  content: "";
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  right: 115%;
+  margin-top: -12px;
+  text-transform: uppercase;
+}
+.switch input:checked ~ label i { /* Toggle */
+  left: auto;
+  right: -1%;
+}
+.switch input:checked ~ label i:before { /* On/off */
+  content: "monthly";
+  z-index: 3;
+  right: 115%;
+  color: #82a06a;
+}
+.switch input {
+  /* Вначале делаем его равным размеру контейнера, в котором он находится */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* Затем, перемещаем его вверх, относительно других элементов */
+  z-index: 100;
+  /* Делаем его невидимым */
+  opacity: 0;
+  /* А это для эргономичности */
+  cursor: pointer;
+  }
+}
+
+.feedback{
+
+  .feedback__container{
+    max-width: 1145px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -100px;
+  }
+  .feedback__block{
+    max-width: 375px;
+    border: 1px solid #E8E8EA;
+    padding: 0 55px 48px 55px;
+  }
+  .feedback__quotes{
+    font: 400 98px/ 121% $f-family;
+      color: #DBE4F1;
+  }
+  .feedback__text{
+    font: 400 18px/ 178% $f-family;
+      color: $color_black;
+      margin-bottom: 40px;
+  }
+  .feedback__author-name:first-of-type{
+    font-weight: bold;
+  }
+  p{
+    display: flex;
+    justify-content: center;
+    font: 400 14px/ 200% $f-family;
+      color: $color_black;
+      text-align: left;
   }
 }
