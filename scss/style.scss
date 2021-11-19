@@ -97,6 +97,9 @@ $f-family: 'Open sans',sans-serif;
             font: 600 20px/110% $f-family;
             color: $color-black;
           }
+          a:hover{
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -145,6 +148,13 @@ $f-family: 'Open sans',sans-serif;
     }
     button:nth-child(2){
       padding: 22px 34px;
+    }
+    button:hover{
+      text-decoration: underline;
+    }
+    button:active{
+      background-color: $color-green;
+      border: none;
     }
 }
 @media (max-width: 520px){
@@ -257,6 +267,15 @@ width: 100%;
       border: 2px solid $color-black;
       padding: 16px 14px;
       letter-spacing: 0.1em;
+  }
+  button:active{
+    background-color: $color-green;
+    color: $color-white;
+    border-color: $color-white;
+  }
+  button:active .services__block{
+    background-color: $color-green;
+    color: $color-white;
   }
   .services__button{
     padding: 24px 58px;
