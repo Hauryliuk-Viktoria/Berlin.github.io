@@ -180,6 +180,9 @@ h1, h2, h3, h4, h5, h6 {
   font: 600 20px/110% "Open sans", sans-serif;
   color: black;
 }
+.header .header__menu .menu__list .menu__item a:hover {
+  text-decoration: underline;
+}
 
 .slide {
   background: url("../img/content-top-fon 1.png") center center/cover no-repeat;
@@ -239,6 +242,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .slide button:nth-child(2) {
   padding: 22px 34px;
+}
+.slide button:hover {
+  text-decoration: underline;
+}
+.slide button:active {
+  background-color: #00897B;
+  border: none;
 }
 
 @media (max-width: 520px) {
@@ -396,6 +406,15 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid black;
   padding: 16px 14px;
   letter-spacing: 0.1em;
+}
+.services button:active {
+  background-color: #00897B;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+.services button:active .services__block {
+  background-color: #00897B;
+  color: #FFFFFF;
 }
 .services .services__button {
   padding: 24px 58px;
