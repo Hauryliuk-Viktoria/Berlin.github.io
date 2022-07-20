@@ -1,5 +1,9 @@
 @import "null";
 
+html{
+  scroll-behavior:smooth; 
+}
+
 $color-black: rgba(0, 0, 0, 1);
 $color-white: #FFFFFF;
 $color-backgrond:#E4FDF9;
@@ -59,10 +63,13 @@ $f-family: 'Open sans',sans-serif;
 }
 .header {
     width: 100%;
-  
+    position: sticky;
+    top: 0;
+    background-color: $color-white;
+
     .header__body {
       min-height: 120px;
-      max-width: 1370px;
+      max-width: 85%;
       padding: 10px;
       display: flex;
       justify-content: space-between;
@@ -151,6 +158,8 @@ $f-family: 'Open sans',sans-serif;
     }
     button:hover{
       text-decoration: underline;
+      background-color: $color-green;
+      border-color: $color-green;
     }
     button:active{
       background-color: $color-green;
@@ -178,7 +187,7 @@ $f-family: 'Open sans',sans-serif;
 .about{
 width: 100%;
 .about__container{  
-  max-width: 1200px;
+  max-width: 75%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -222,7 +231,7 @@ width: 100%;
   width: 100%;
   background-color: $color-backgrond;
   .services__container{
-    max-width: 1200px;
+    max-width: 75%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -244,6 +253,9 @@ width: 100%;
     padding: 50px 40px;
     margin: 10px 10px 45px;
 
+  }
+  .white-img{
+    display: none;
   }
   img{
     width: 56px;
@@ -284,13 +296,33 @@ width: 100%;
     border: none;
     margin-bottom: 115px;
   }
+  .services__block:hover{
+    background-color: $color-green;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+    .services__block-text{
+      color:$color-white;
+    }
+    .services__block-title{
+      color:$color-white;
+    }
+    .black-img{
+      display: none;
+    }
+    .white-img{
+      display: block;
+    }
+    button{
+      color: $color-white;
+      border-color: $color-white;
+    }
+  }
 }
 
 .price{
   width: 100%;
   background-color: $color-grey-background;
   .price__container{
-    max-width: 1370px;
+    max-width: 85%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -347,12 +379,20 @@ width: 100%;
     border: 2px solid $color-black;
     margin-bottom: 50px;
   }
+  .price__block:hover{
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.35);
+    button{
+      background-color: $color-green;
+      color: $color-white;
+      border-color: $color-white;
+    }
+  }
 }
 
 .team{
   width: 100%;
   .team__container{
-    max-width: 1370px;
+    max-width: 85%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -394,6 +434,9 @@ width: 100%;
       height: 50px;
       border-radius: 10px;
     }
+    button:hover{
+      border: 2px solid $color-green;
+    }
   }
   .team__circle{
     width: 20px;
@@ -415,7 +458,7 @@ width: 100%;
   background-color: $color-backgrond;
   width: 100%;
   .blog__container{
-    max-width: 1370px;
+    max-width: 85%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -427,9 +470,11 @@ width: 100%;
   .blog__block{
     display: flex;
     flex-direction: row;
+    width: 100%;
   }
+  //e
   img{
-    width: 685px;
+    max-width: 50%;
   }
   .blog__text-block{
     display: flex;
@@ -479,6 +524,9 @@ width: 100%;
   .blog__block:nth-child(2n+1){
     flex-direction: column;
   }
+  .blog__block img{
+    max-width: 625px;
+  }
   .blog__block:nth-child(2){
     flex-direction: column-reverse;
     margin-bottom: 40px;
@@ -504,7 +552,7 @@ width: 100%;
   background-color:#222321;
   width: 100%;
   .contact__container{
-    max-width: 1200px;
+    max-width: 75%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -614,7 +662,7 @@ width: 100%;
   width: 100%;
   min-height: 190px;
   .footer__container{
-    max-width: 1370px;
+    max-width: 85%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -641,7 +689,8 @@ width: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      padding: 70px 0;
+      padding: 70px 0 70px 70px;
+
     }
     .footer__block-text{
       font: 400 18px/156% $f-family;
@@ -657,6 +706,13 @@ width: 100%;
       img:nth-child(2){
         margin-left: 13px;
       }
+    }
+  }
+}
+@media (max-width: 1400px){
+  .footer{
+    .menu__item:nth-child(5){
+      flex-wrap: wrap;
     }
   }
 }
