@@ -70,9 +70,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .title {
   font: 700 36px/136% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
   padding: 114px 0 30px;
 }
@@ -80,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 .text {
   max-width: 822px;
   font: 400 18px/133% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
   text-align: center;
   padding-bottom: 102px;
@@ -125,10 +129,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header {
   width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
 }
 .header .header__body {
   min-height: 120px;
-  max-width: 1370px;
+  max-width: 85%;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header .header__logo a {
   font: 400 16px/138% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 .header .burger {
   max-width: 21px;
@@ -178,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header .header__menu .menu__list .menu__item a {
   font: 600 20px/110% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 .header .header__menu .menu__list .menu__item a:hover {
   text-decoration: underline;
@@ -245,6 +252,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .slide button:hover {
   text-decoration: underline;
+  background-color: #00897B;
+  border-color: #00897B;
 }
 .slide button:active {
   background-color: #00897B;
@@ -277,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 .about .about__container {
-  max-width: 1200px;
+  max-width: 75%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -326,13 +335,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .about .about__block-title {
   font: 600 20px/110% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
   padding: 30px 0;
 }
 .about .about__block-text {
   font: 400 15px/147% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.08em;
 }
 
@@ -341,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #E4FDF9;
 }
 .services .services__container {
-  max-width: 1200px;
+  max-width: 75%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,26 +393,29 @@ h1, h2, h3, h4, h5, h6 {
   padding: 50px 40px;
   margin: 10px 10px 45px;
 }
+.services .white-img {
+  display: none;
+}
 .services img {
   width: 56px;
 }
 .services .services__block-title {
   font: 600 20px/110% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   padding: 40px 0 20px;
   letter-spacing: 0.1em;
 }
 .services .services__block-text {
   font: 400 15px/167% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding-bottom: 40px;
   letter-spacing: 0.1em;
 }
 .services button {
   font: 600 20px/110% "Open sans", sans-serif;
-  color: black;
-  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   padding: 16px 14px;
   letter-spacing: 0.1em;
 }
@@ -423,13 +435,34 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   margin-bottom: 115px;
 }
+.services .services__block:hover {
+  background-color: #00897B;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+}
+.services .services__block:hover .services__block-text {
+  color: #FFFFFF;
+}
+.services .services__block:hover .services__block-title {
+  color: #FFFFFF;
+}
+.services .services__block:hover .black-img {
+  display: none;
+}
+.services .services__block:hover .white-img {
+  display: block;
+}
+.services .services__block:hover button {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
 
 .price {
   width: 100%;
   background-color: #F0F1F1;
 }
 .price .price__container {
-  max-width: 1370px;
+  max-width: 85%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,22 +530,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 .price .price__benefits li {
   font: 300 17px/412% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   border-bottom: 1px solid #BFBFBF;
 }
 .price button {
   padding: 19px 23px;
   font: 600 20px/110% "Open sans", sans-serif;
-  color: black;
-  border: 2px solid black;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   margin-bottom: 50px;
+}
+.price .price__block:hover {
+  -webkit-box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.35);
+          box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.35);
+}
+.price .price__block:hover button {
+  background-color: #00897B;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 .team {
   width: 100%;
 }
 .team .team__container {
-  max-width: 1370px;
+  max-width: 85%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -547,13 +589,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .team .team__block .team__name {
   font: 600 24px/92% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
   padding: 40px 0 15px;
 }
 .team .team__block .team__position {
   font: 400 20px/110% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
   padding-bottom: 40px;
 }
@@ -572,6 +614,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 50px;
   height: 50px;
   border-radius: 10px;
+}
+.team .team__block button:hover {
+  border: 2px solid #00897B;
 }
 .team .team__circle {
   width: 20px;
@@ -600,7 +645,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 .blog .blog__container {
-  max-width: 1370px;
+  max-width: 85%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -624,9 +669,10 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
 }
 .blog img {
-  width: 685px;
+  max-width: 50%;
 }
 .blog .blog__text-block {
   display: -webkit-box;
@@ -660,13 +706,13 @@ h1, h2, h3, h4, h5, h6 {
 .blog .date {
   font-weight: bold;
   font: 600 18px/122% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
   padding: 0 70px 0 20px;
 }
 .blog .text-block__text {
   font: 400 18px/144% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
 }
 .blog button {
@@ -688,6 +734,10 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .blog__block img {
+    max-width: 625px;
   }
 
   .blog__block:nth-child(2) {
@@ -717,7 +767,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 .contact .contact__container {
-  max-width: 1200px;
+  max-width: 75%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -840,27 +890,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 .contact .contact__container .contact__form input::-webkit-input-placeholder {
   font: 600 20px/140% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
 }
 .contact .contact__container .contact__form input::-moz-placeholder {
   font: 600 20px/140% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
 }
 .contact .contact__container .contact__form input:-ms-input-placeholder {
   font: 600 20px/140% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
 }
 .contact .contact__container .contact__form input::-ms-input-placeholder {
   font: 600 20px/140% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
 }
 .contact .contact__container .contact__form input::placeholder {
   font: 600 20px/140% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
 }
 .contact .contact__container .contact__form .message::-webkit-input-placeholder {
@@ -905,7 +955,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 190px;
 }
 .footer .footer__container {
-  max-width: 1370px;
+  max-width: 85%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -935,7 +985,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer .footer__container .footer__menu .menu__list .menu__item a {
   font: 600 20px/110% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.1em;
 }
 .footer .footer__container .footer__block {
@@ -949,11 +999,11 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 70px 0;
+  padding: 70px 0 70px 70px;
 }
 .footer .footer__container .footer__block-text {
   font: 400 18px/156% "Open sans", sans-serif;
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.0025em;
   text-transform: uppercase;
   padding-bottom: 8px;
@@ -963,4 +1013,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer .footer__container .footer__block-social img:nth-child(2) {
   margin-left: 13px;
+}
+
+@media (max-width: 1400px) {
+  .footer .menu__item:nth-child(5) {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
